@@ -48,6 +48,11 @@ def s(slugReq):
     flash("Slug not found", "danger")
     return redirect(url_for("index"))
 
+@app.route("/s")
+@app.route("/s/")
+def noslug():
+    flash("Slug does not exist.", "danger")
+    return redirect(url_for("index"))
         
 
 if __name__ == "__main__":
